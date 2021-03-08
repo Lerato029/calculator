@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+    <link href="task3.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1938f1a8f2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 id="h1">Welcome To Task3 :)</h1>
+    <form id="form">
+        <label>Choose a number :)</label>
+        <!-- Select will contain all my <option> elements created in Javascript -->
+        <select id="select"></select>
+    </form>
+    <p id="p1">
+        Data attributes wil be used to call buttons in Javascript and the Data number will be allocated to all the numbers.
+        The Data-operations will be allocated to all operations buttons and the Calculator will be contained in a grid.
+    </p>
+
+    <!-- ==========================================Calculator===================================================== -->
+    <!-- Data attributes wil be used to call buttons in Javascript 
+        -Data number allocated to all the numbers
+        -Data operations for all operations buttons
+        Calculator will be contained in a grid -->
+    <h2 id="h2">Check Out This Calculator!</h2>
+    <div class="calculator-grid">
+        <!-- The Output Screen -->
+        <div class="output">  
+            <!--what user is currently typing in -->
+            <div data-previous-operand class="previous-operand"></div>
+            <!--what was previously typed in -->
+            <div data-current-operand class="current-operand"></div>
+        </div>
+        <!-- ===================================buttons=============================================================-->
+        <!-- The % button to divide numbers by 100 allocated data percent -->
+        <button data-percent>%</button>
+        <!-- The CE button to cancel the all input data all clear -->
+        <button data-all-clear>CE</button>
+        <!-- The C button to cancel the current input allocated data clear-->
+        <button data-clear>C</button>
+        <!-- data delete for backspace/delete button -->
+        <button data-delete>DEL</button>           
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>÷</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <!-- Multiplication -->
+        <button data-operation>*</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+            <!-- Addition -->
+        <button data-operation>+</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <!-- Equals allocated data equals-->
+        <button data-equals>=</button>
+        <!-- Subtraction -->
+        <button data-operation>-</button>
+    </div>
+
+    <!-- ==========================================Drop Down List Numbers========================================== -->
+    <h2 id="h22">Click on Button See What Happens</h2>
+    <!-- function clickStatus() is called through the onclick event - which will append numbers to my drop down list-->
+    <button id="click" onclick="clickStatus()">This Button Has Not Been Clicked Yet</button>
+
+    <!-- ==========================================Currency Converter Rand========================================== -->
+    <h2 id="h23">Currency Converter Rand - See how Cheap The Rand Is! :)</h2>
+    <label> R </label>
+    <input type="text" id='rands'>
+    <!-- The button bellow call out the functions which compute the currency exchange of the input value in rands from the
+    #rands input element"-->
+    <button onclick="calcUSD()"> USD </button>
+    <button onclick="calcEUR()"> EUR </button>
+    <button onclick="calcGBP()"> GBP </button>
+    <!-- This is where the results will be displayed -->
+    <label id="amount"></label>
+    <!-- ==========================================IMAGES AND A PARAGRAPH TO MEET THE BRIEF :)========================================== -->
+    <div> 
+        <h2 id="h24">Cool images</h2>
+        <img  id= "Image1" alt="image " width="250"  src="images3/31.jpg"/> 
+        <img  id= "Image2" alt="image " width="250"  src="images3/32.jpg"/> 
+    </div> 
+    
+    <p id="p2">
+        Wow this task required a lot of hours of making and fixing mistakes. It was fun though and I've learned a lot about
+        Javascript and what it hates. I've also learned to design the code before writing it out and how sensitive code can be. 
+    </p>
+    <!-- ========================================lINK TO THE JAVASCRIPT============================================= FILE-->
+    <script src="task3.js"></script>
+</body>
+</html>

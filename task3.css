@@ -1,0 +1,79 @@
+/* ========================================================Basic Styling======================================= */
+/* selecting all elements, before and after elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 20px;
+    margin: 0;
+}
+
+
+p {
+    width: 50%;
+}
+
+/* ========================================================The Calculator Grid======================================= */
+.calculator-grid {
+    /* Setting up my grid for the calculator which wil be centered */
+    display: grid;
+    justify-content: left;
+    align-content: center;
+    min-height: 100vh;
+    /* Setting up grid template */
+    grid-template-columns: repeat(4, 110px);
+    /* all 4 columns will have a 110px width */
+    /*all 6 rows will have a 110px height and the top output row will have a min and max height as set below*/
+    grid-template-rows: minmax(130px, auto) repeat(6, 110px);
+}
+
+/* selecting all the buttons to be styled */
+.calculator-grid button {
+    cursor: pointer;
+    font-size: 32px;
+    border: 1px solid rgb(94, 94, 94);
+    /*Removing the default outlines*/
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.900);
+    color: white;
+}
+
+.calculator-grid button:hover {
+    background-color: rgba(0, 0, 0, 0.800);
+}
+
+.output {
+    /* Calling out column one which is our output row */
+    grid-column: 1/-1;
+    background-color: rgb(94, 94, 94);
+    /*Aligning the contents of the output row to the right side of the container*/
+    display: flex;
+    /*Adding space around so the contents are closer to each other and further from the top and bottom*/
+    align-items: flex-end;
+    justify-content: space-around;
+    /* Using flex-direction set to column to align contents vertically */
+    flex-direction: column;
+    padding: 10px;
+    /* Cause numbers to wrap as they get larger */
+    word-wrap: break-word;
+    /*break all to apply break-word to all numbers*/
+    word-break: break-all;
+}
+
+/* Styling previous number in the output container */
+.output .previous-operand {
+    color: rgb(197, 197, 197);
+    font-size: 20px;
+}
+
+/* Styling current number in the output container */
+.output .current-operand {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
